@@ -1,0 +1,9 @@
+list_of_presents = ["Parfum", "Socks", "Sweather", "Cup",
+  "Hat", "Tea", "Coffee", "Clock", "Bag",
+  "Book", "Wallet", "Cream", "Earrings"]
+
+list_of_presents.each do |present|
+  bin = []
+  present.each_char { |char| bin << char.ord.to_s(2) }
+  puts "#{present}: #{bin.join(" ")}"
+end
