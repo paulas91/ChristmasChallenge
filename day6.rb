@@ -6,10 +6,12 @@
 
 
      class Recipe
-       attr_reader :ingrediens, :name
+       attr_reader :ingrediens
 
         def initialize(name, ingrediens, description)
-          @ingrediens = ingrediens
+          @name = name,
+          @ingrediens = ingrediens,
+          @description = description
         end
      end
 
