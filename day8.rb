@@ -33,9 +33,5 @@
     ]
 
 
-    addresses.uniq! { |address| [address.street, address.streets_number, address.home_number, address.city, address.zip_code] }
-
-    puts addresses
-
-
+    puts addresses.uniq { |adress| adress.to_s }
 
