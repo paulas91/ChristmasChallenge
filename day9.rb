@@ -28,20 +28,14 @@ Address.new("Uszkowa", "43H", 5, "Wroclaw", "02-326"),
 Address.new("Cukierkowa", "23I", 5, "Poznan", "02-326"),
 ]
 
-tab = []
-adresses.each { |la| tab.push(la.to_s) }
-tab.map! {|el| el.downcase }
-
-sam = []
-tab.each do |element|
-  element.each_char do |char|
-    if char =~ /[aeiouy]/
-      sam.push(char)
-    end
+counter = 0
+adresses.each do |adress|
+  adress.to_s.downcase.each_char do |char|
+    counter += 1 if char =~ /[aeiouy]/
   end
 end
 
-p sam.size * 2
+p counter * 2
 
 
 
